@@ -1,0 +1,170 @@
+html, body { 
+    --color-1: #a8e6cf;
+    --color-2: #dcedc1; 
+    --color-3: #ffd3b6; 
+    --color-4: #ffaaa5; 
+    --color-5: #ff8b94;
+    margin: 0;
+    padding: 0;
+}
+
+#message{
+    background-image: linear-gradient(135deg, black, green);
+    color: goldenrod;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+body {
+    padding-top: 50px;
+    background-image: linear-gradient(135deg, black , green);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: black;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+    padding: 50px;
+    position: relative;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: goldenrod;
+    margin: 0 auto;
+    font-size: 80px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    color: goldenrod;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rollBtn {
+    background-color: var(--color-5);
+    margin-bottom: 10px;
+}
+
+#rollDblBtn {
+    background-color: black;
+    color: goldenrod;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+#resetBtn {
+     background-color: black;
+}
+
+button:focus, #dicePic {
+    outline: none;
+}
+
+button:hover{
+ box-shadow:
+ 0px 1px 1px rgba(255,255,255,0.8) inset,
+ 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+#dicePic:hover{
+    cursor: pointer;
+}
+
+button:active {
+ position:relative;
+ top:1px;
+ background:#80ab5d;
+ box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+ border-color: #a9db80;
+}
+button:active{
+ transform: scale(1.1);
+}
+
+#resetBtn {
+    display: none;
+}
+
+.active {
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+}
+
+@keyframes rotate {
+    
+    0% {
+    transform: rotate(0deg);
+    transform: translateY(-100px);
+   }
+   50% {
+        transform: translateY(100px);
+   }
+   60%{
+       transform: rotate(45deg);
+       
+   }
+   70%{
+       transform: rotate(75deg);
+      
+   }
+   80%{
+       transform: rotate(115deg);
+       
+   }
+   90% {
+        transform: rotate(150deg);
+   }
+   100% {
+        transform: rotate(190deg);
+   }
+}
+
+#dicePic{
+    font-size: 70px;
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    top: 0;
+    animation: rotate 1s;
+}
+
+#nuanCat {
+    display: none;
+    grid-area: image;
+    width: 100px;
+    animation: nuanCatRuns 3s 1 linear forwards;
+    position: absolute;
+    top: 25%;
+    left: -300;
+}
+
+@keyframes nuanCatRuns {
+    
+    0% {
+    transform: translateX(0px);
+   }
+    100% {
+        transform: translateX(500px);
+   }
+}
