@@ -149,17 +149,17 @@ button:active{
     animation: rotate 1s;
 }
 
-#nuanCat {
+#nyanCat {
     display: none;
     grid-area: image;
     width: 100px;
-    animation: nuanCatRuns 3s 1 linear forwards;
+    animation: nyanCatRuns 3s 1 linear forwards;
     position: absolute;
     top: 25%;
     left: -300;
 }
 
-@keyframes nuanCatRuns {
+@keyframes nyanCatRuns {
     
     0% {
     transform: translateX(0px);

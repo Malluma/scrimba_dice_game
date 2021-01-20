@@ -14,15 +14,15 @@ const resetBtn = document.getElementById("resetBtn");
 let dicePic = document.getElementById('dicePic');
 const parentDicePic = document.getElementById('parentDicePic');
 const players = document.getElementsByClassName('players')[0];
-let nuanCat = document.getElementById('nuanCat');
+let nyanCat = document.getElementById('nyanCat');
 
 function gameOver() {
     
-    const nuanCatClone = nuanCat.cloneNode();
-    nuanCat.remove();
-    nuanCat = nuanCatClone;
-    nuanCat.style.display = 'block';
-    players.appendChild(nuanCat);
+    const nyanCatClone = nyanCat.cloneNode();
+    nyanCat.remove();
+    nyanCat = nyanCatClone;
+    nyanCat.style.display = 'block';
+    players.appendChild(nyanCat);
 
     rollDblBtn.style.display = "none"
     resetBtn.style.display = "block"
@@ -127,5 +127,5 @@ function reset() {
     rollDblBtn.style.display = "block"
     player2Dice.classList.remove("active")
     player1Dice.classList.add("active")
-    nuanCat.style.display = 'none';
+    nyanCat.style.display = 'none';
 }
